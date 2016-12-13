@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  titleColor() : string {
+    return (this.title.length % 2 === 0) ?
+      'gray' : 'blue';
+  }
 }
