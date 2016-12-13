@@ -4,10 +4,12 @@
 
 <form #myForm="ngForm">
   <label>Name</label>
-  <input name="name" [(ngModel)]="model.name">
+  <input name="name" [(ngModel)]="model.name"
+    required pattern="[A-Z][a-z]+">
 
   <label>Age</label>
-  <input name="age" [(ngModel)]="model.age">
+  <input name="age" [(ngModel)]="model.age"
+    required pattern="[0-9]+">
 </form>
 <p *ngIf="!myForm.form.valid">
   Form is invalid
