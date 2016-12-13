@@ -1,3 +1,14 @@
 <p>
   my-form works!
 </p>
+
+<form #myForm="ngForm">
+  <label>Name</label>
+  <input name="name" [(ngModel)]="model.name">
+
+  <label>Age</label>
+  <input name="age" [(ngModel)]="model.age">
+</form>
+<p *ngIf="!myForm.form.valid">
+  Form is invalid
+</p>
